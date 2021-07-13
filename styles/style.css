@@ -24,6 +24,11 @@ body {
     height: 438px;
     padding-left: 78px;
     padding-top: 25px;
+    transition: width 1s ease-in, height 1s, transform 1s;
+}
+
+.container:hover img  {
+    transform: scale(1.3) rotate(-10deg);
 }
 
 .heading-contain {
@@ -45,6 +50,7 @@ body {
     background-color: #E02C6D;
     color: white;
     padding: 5px 15px;
+
 }
 
 
@@ -109,10 +115,10 @@ footer img {
 
 .socail-icon {
     color: #969BAB;
-   
+
 }
 
-.socail-icon i{
-    Width :17.07px;
-Height : 17.07px;
+.socail-icon i {
+    Width: 17.07px;
+    Height: 17.07px;
 }
