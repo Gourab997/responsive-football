@@ -1,7 +1,7 @@
 /* import google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-
+/* common style */
 body {
     font-family: 'Poppins', sans-serif;
     padding: 0;
@@ -9,6 +9,7 @@ body {
     background-color: #F3F1FF;
 }
 
+/* first banner */
 
 .container {
     display: flex;
@@ -24,7 +25,7 @@ body {
     height: 438px;
     padding-left: 78px;
     padding-top: 25px;
-    transition: width 1s ease-in, height 1s, transform 1s;
+    transition: width 1s ease-in, height 1s, transform 0.7s;
 }
 
 .container:hover img {
@@ -35,13 +36,20 @@ body {
 
     padding-top: 150px;
     padding-bottom: 240px;
+    
 }
 
 .heading-contain h1 {
     font-weight: bold;
     font-size: 64px;
     color: white;
+    transition: width 0.5s ease-in, height 0.9s, transform 0.7s 0.7s;
+    
 
+}
+
+.container:hover h1 {
+   transform: translateX(-30%);
 }
 
 .heading-contain a {
@@ -53,6 +61,8 @@ body {
 
 }
 
+
+/* Player list Section */
 
 .secound-container {
     display: flex;
@@ -99,11 +109,42 @@ body {
 
 }
 
+/* Hightlights section */
 
 
 
 
 
+
+.video-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.videos {
+    display: flex;
+}
+
+.videos h1 {
+    margin-right: 10%;
+    font-size: 40px;
+    color: rgba(128, 0, 128, 0.815);
+}
+
+.video {
+    width: 560px;
+    height: 315px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+
+/* news section */
 
 .news-section {
 
@@ -144,18 +185,20 @@ body {
 .news-caption h3 {
     color: rgb(255, 0, 0);
 }
-.news-caption input{
+
+.news-caption input {
     border: 2px solid rgb(76, 0, 255);
     border-radius: 4px;
     height: 30px;
     width: 200px;
-    box-shadow:2px 2px 2px 2px #2D25A0;
+    box-shadow: 2px 2px 2px 2px #2D25A0;
 }
+
 .news-caption input:focus {
     background-color: rgb(133, 167, 165);
 }
 
-.news-caption button{
+.news-caption button {
     background-color: #E02C6D;
     padding: 10px 20px 10px 20px;
     margin-left: 20px;
@@ -163,8 +206,8 @@ body {
 }
 
 .news {
-    border: 2px solid #999999;
-    box-shadow: 2px 2px 2px 2px rgb(110, 108, 108);
+    border: 2px solid #b9b9b9;
+    box-shadow: 2px 2px 2px 2px rgb(199, 198, 198);
     padding: 2px 2px 2px 2px;
     border-radius: 5px;
     width: 200px;
@@ -178,42 +221,7 @@ body {
     width: 100%;
 }
 
-
-
-
-
-
-
-
-.video-corner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 10%;
-    padding-bottom: 5%;
-}
-
-.videos {
-    display: flex;
-}
-
-.videos h1 {
-    margin-right: 10%;
-    font-size: 40px;
-    color: rgba(128, 0, 128, 0.815);
-}
-
-.video {
-    width: 560px;
-    height: 315px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;
-    grid-column-gap: 10px;
-}
-
-
-
+/* Footer Section */
 
 footer {
     display: flex;
@@ -229,13 +237,20 @@ footer img {
 }
 
 .socail-icon {
-    color: #969BAB;
+    color: #56575e;
+   
 
 }
 
 .socail-icon i {
     Width: 17.07px;
     Height: 17.07px;
+    border: 1px solid #a0a0a091;
+  
+    padding: 8px 8px 8px 8px;
+    border-radius: 50px;
+    background-color: #a0a0a091;
+    
 }
 
 
@@ -325,7 +340,34 @@ footer img {
     }
 
 
+    .news-section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 40%;
 
+    }
+
+    .news-caption {
+        margin-bottom: 20%;
+        padding-left: 10%;
+       
+
+    }
+    .news-caption button{
+        margin-top: 5%;
+    }
+
+    .news-caption p {
+        display: none;
+    }
+
+    .newses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 
 
     footer {
@@ -342,7 +384,7 @@ footer img {
 
 
 /* tablet devices */
-@media only screen and (min-width:688px) and (max-width:992px) {
+@media only screen and (min-width:688px) and (max-width:1040px) {
     .container {
         width: 100%;
         padding-left: 10%;
@@ -362,7 +404,33 @@ footer img {
 
         grid-template-columns: repeat(2, 1fr);
     }
+.videos h1{
+    margin-left: 2%;
+}
+    .news-section {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 40%;
 
+    }
 
+    .news-caption {
+        margin-bottom: 20%;
+        position: static;
+    }
+    .news-caption button{
+        margin-top: 5%;
+    }
+    .news-caption p {
+        display: none;
+    }
+
+    .newses {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }
