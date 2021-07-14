@@ -13,7 +13,7 @@ body {
 .container {
     display: flex;
     background-color: #2D25A0;
-    max-width: 100%;
+    width: 100%;
     height: 677px;
     align-items: center;
     justify-content: center;
@@ -112,7 +112,7 @@ body {
     display: flex;
 }
 
-.videos h1{
+.videos h1 {
     margin-right: 10%;
     font-size: 40px;
     color: rgba(128, 0, 128, 0.815);
@@ -160,14 +160,19 @@ footer img {
 
 /* mobile device  */
 @media only screen and (max-width:688px) {
+    main {
+        max-width: 100%;
+        overflow: hidden;
+    }
 
     .container {
+        overflow: hidden;
         padding-top: 112px;
-        width: 100%;
+        max-width: 100%;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
-        padding-left: 16px;
+        padding-left: 10px;
     }
 
     .heading-contain {
@@ -176,29 +181,62 @@ footer img {
     }
 
     .container h1 {
-        font-size: 20px;
+        font-size: 35px;
+
     }
 
     .container img {
-        margin-top: -40%;
+        margin-top: -35%;
 
-        margin-left: -20%;
-        width: 150px;
-        height: 140.17px;
+        margin-left: -10%;
+        width: 200px;
+        height: 150.17px;
 
 
     }
 
     .secound-container {
-        width: 100%;
+        max-width: 100%;
     }
 
     .players {
-        width: 100%;
+
         display: grid;
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 2%;
+
     }
+
+    .player {
+        width: 230px;
+        height: 374px;
+    }
+
+    .players img {
+        width: 230px;
+        height: 156px;
+    }
+
+    .videos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .videos h1 {
+        font-size: 20px;
+        padding-left: 100px;
+    }
+
+    .video {
+        display: flex;
+
+        overflow: scroll;
+        overflow-y: hidden;
+        width: 30%;
+        height: 20%;
+    }
+
 
     footer {
         width: 100%;
@@ -208,6 +246,7 @@ footer img {
         width: 271px;
         height: 63px;
     }
+
 }
 
 
